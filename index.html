@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Json Guide</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            background-color: #f1f1f1;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+        }
+
+        table {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 3px;
+        }
+
+        .code {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h3>JSON</h3>
+    <p>
+        JSON is a lightweight data-interchange format. Mostly  it is used to transfer data between computers. 
+    </p>
+    <h3>Things to Remember</h3>
+    <ul>
+        <li> JSON means Javascript Object Notation.</li>
+        <li> It is self-describing and easy to understand.</li>
+        <li>It is used as a data-interchange format.</li>
+        <li>JSON is Language Independent.</li>
+        <li>JSON is used to send data between computers.</li>
+    </ul>
+    <pre>Note: The file type of json is .json</pre>
+    <h3>Use of JSON</h3>
+    <ul>
+        <li>It is used to transfer data between the web server and web application.</li>
+        <li>Web Services and APIs use JSON format to provide data.</li>
+        <!-- It is used for serializing and transmitting structured data over the network. -->
+    </ul>
+
+    <h3>JSON Data Types</h3>
+    <table>
+        <tr>
+            <th>Data Type</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>String</td>
+            <td>A string is a sequence of characters.</td>
+        </tr>
+        <tr>
+            <td>Number</td>
+            <td>A number is a sequence of digits.</td>
+        </tr>
+        <tr>
+            <td>Boolean</td>
+            <td>A Boolean is either true or false.</td>
+        </tr>
+        <tr>
+            <td>Null</td>
+            <td>A Null is an empty value.</td>
+        </tr>
+        <tr>
+            <td>Array</td>
+            <td>An array is an ordered list of values. Represented By: [] </td>
+        </tr>
+        <tr>
+            <td>Object</td>
+            <td>An object is a collection of key-value pairs. Represented By: {}</td>
+        </tr>
+       
+    </table>
+    <h3>JSON Syntax</h3>
+    <ul>
+        <li>Data is represented in name/value pairs.</li>
+        <li>Each name is associated with a value.</li>
+        <li>Curly bracket {} holds objects.</li>
+        <li>Square bracket [] holds arrays.</li>
+        <li>Name and value pairs are separated by a comma.</li>
+    </ul>
+    <h3>Example of JSON</h3>
+    <p>
+        <pre>
+            {
+                "name": "Bishworaj Poudel",
+                "address": "Pokhara, Nepal",
+                "age": 24,
+                "image": "https://raw.githubusercontent.com/bishworajpoudelofficial/JsonGuide/main/brp.png",
+                "description": "Hello World, I am Bishworaj Poudel."
+            }
+        </pre>
+        <h3>JSON Vs XML</h3>
+        <p>JSON and XML are human-readable formats and are language-independent. JSON is easier than XML.</p>
+        <ul>
+            <li>JSON is shorter and simple.</li>
+            <li>JSON is quick to read and write.</li>
+            <li>JSON doesn't use an end tag</li>
+        </ul>
+        <h3>JSON with Javascript </h3>
+        <p>
+            <pre>
+              text = ` {
+                    "name": "Bishworaj Poudel",
+                    "address": "Pokhara, Nepal",
+                    "age": 24,
+                    "image": "https://raw.githubusercontent.com/bishworajpoudelofficial/JsonGuide/main/brp.png",
+                    "description": "Hello World, I am Bishworaj Poudel."
+                }`
+
+                obj = JSON.parse(text)
+                console.log(obj.name)
+                console.log(obj.address)
+                console.log(obj.age)
+                console.log(obj.image)
+                console.log(obj.description)
+            </pre>
+            <h3>JSON with Python </h3>
+        <p>
+            <pre>
+                import json
+                text = """ {
+                                    "name": "Bishworaj Poudel",
+                                    "address": "Pokhara, Nepal",
+                                    "age": 24,
+                                    "image": "https://raw.githubusercontent.com/bishworajpoudelofficial/JsonGuide/main/brp.png",
+                                    "description": "Hello World, I am Bishworaj Poudel."
+                                } """
+                
+                obj = json.loads(text)
+                print(obj["name"])
+                print(obj["address"])
+            </pre>
+               <h3>Convert Python Dictionary to JSON</h3>
+        <p>
+            <pre>
+                import json
+
+                # This is python object
+                data = {
+                    "name":"Bishworaj Poudel",
+                    "age":24,
+                    "address": "Pokhara, Nepal"
+                } 
+                
+                text = json.dumps(data)
+                print(type(text))
+                print(text)
+            </pre>
+<h3>Some Examples of JSON</h3>
+<a href="info.json">Demo Example 1 [Personal Info]</a> <br>
+<a href="person.json">Demo Example 2 [Personal Info Complex]</a> <br>
+<a href="quotes.json">Demo Example 3 [Motivational Quotes]</a>
+</body>
+</html>
